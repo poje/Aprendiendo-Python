@@ -125,4 +125,10 @@ def devuelveTodo(nombre, apellidos):
 
 print(devuelveTodo("Jorge", "Villaseca"))
 
-#testing
+
+#Ejercicio 8 - Funciones Lambda
+print("#### Ejercicio 8 ####")
+
+dime_el_year = lambda year: f"el año es { year * 50 }"
+
+print(dime_el_year(2034))
