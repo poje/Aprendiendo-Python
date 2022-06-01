@@ -25,7 +25,7 @@ while condicion:
 
 # print(f"{muestrame}")
 
-#Ejemplo
+# Ejemplo
 
 print("#### ejemplo ####")
 
