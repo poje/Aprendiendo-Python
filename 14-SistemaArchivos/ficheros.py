@@ -1,6 +1,8 @@
 from io import open
 
 import pathlib
+import shutil
+import os
 
 # Abrir Archivos
 
@@ -40,3 +42,27 @@ for frase in lista:
     print(lista_frase)
 
 # print(lista)
+
+# Copiar
+ruta_original = str(pathlib.Path().absolute()) + "//fichero_texto.txt"
+ruta_nueva = str(pathlib.Path().absolute()) + "//fichero_texto_copiado.txt"
+
+shutil.copyfile(ruta_original, ruta_nueva)
+
+# Mover
+ruta_original = str(pathlib.Path().absolute()) + "//fichero_texto_copiado.txt"
+ruta_nueva_mov = str(pathlib.Path().absolute()) + "//fichero_texto_copiado_mov.txt"
+
+shutil.move(ruta_original, ruta_nueva_mov)
+
+# Eliminar archivos
+
+os.remove(ruta_nueva_mov)   
+
+# print(os.path.abspath("./"))
+
+ruta_comprobar = "fichero_texto.txt"
+if os.path.isfile(ruta_comprobar):
+    print("El archivo existe")
+else:
+    print("El archivo no existe")
