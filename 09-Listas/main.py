@@ -1,4 +1,5 @@
 from ast import For
+import email
 
 
 pelicula = "Batman"
@@ -31,18 +32,18 @@ cantantes.append("Eminem")
 print(cantantes)
 
 # Recorrer Lista
-print("\n##### listado de peliculas #####")
+# print("\n##### listado de peliculas #####")
 
-nueva_pelicula = ""
+# nueva_pelicula = ""
 
-while nueva_pelicula != "parar":
-    nueva_pelicula = input("Introduce la nueva pelicula: ")
-    if nueva_pelicula != "parar":
-        peliculas.append(nueva_pelicula)
+# while nueva_pelicula != "parar":
+#     nueva_pelicula = input("Introduce la nueva pelicula: ")
+#     if nueva_pelicula != "parar":
+#         peliculas.append(nueva_pelicula)
 
 
-for pelicula in peliculas:
-    print(f"{peliculas.index(pelicula)+1} - {pelicula} ")
+# for pelicula in peliculas:
+#     print(f"{peliculas.index(pelicula)+1} - {pelicula} ")
 
 # Listas multidimensionales
 
@@ -62,3 +63,14 @@ contactos = [
         'pablo@pablo.cl'
     ]
 ]
+
+print(contactos)
+
+for contacto in contactos:
+    for elemento in contacto:
+        if contacto.index(elemento) == 0:
+            print("Nombre: " + elemento)
+        else:
+            print("Email: " + elemento)
+    print("\n")
+
