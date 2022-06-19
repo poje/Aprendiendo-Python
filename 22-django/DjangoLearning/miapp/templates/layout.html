@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+      {% comment %} Titulo de cada página {% endcomment %}
+      {% endblock title %}
+      
+      | Sitio Web con Django
+    </title>
+    
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'css/styles.css' %} ">
+  </head>
+  <body>
+    <h1>Sitio Web con Django - Jorge Villaseca R.</h1>
+    <hr />
+    <ul>
+      <li>
+        <a href="/inicio">Inicio</a>
+      </li>
+      <li>
+        <a href="/holamundo">Hola Mundo !</a>
+      </li>
+      <li>
+        <a href="/pagina">pagina</a>
+      </li>
+      <li>
+        <a href="/contacto">contacto</a>
+      </li>
+    </ul>
+    <hr />
+
+    <div id="content">
+       {% block content %}
+       {% comment %} aqui va el content {% endcomment %}
+       <strong>contenido del bloque original</strong>
+       
+       {% endblock content %}
+    </div>
+
+    <hr />
+    <footer>
+        Master en Python 🐍
+    </footer>
+  </body>
+</html>
