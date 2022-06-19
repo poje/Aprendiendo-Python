@@ -10,11 +10,12 @@ else:
 # Eliminar Carpeta
 # os.rmdir("./mi_carpeta")
 
-ruta_original = "./mi_carpeta"
-ruta_nueva = "./mi_carpeta_copiada"
+# Copiar
+# ruta_original = "./mi_carpeta"
+# ruta_nueva = "./mi_carpeta_copiada"
 
 
-shutil.copytree(ruta_original, ruta_nueva)
+# shutil.copytree(ruta_original, ruta_nueva)
 
 # Eliminar
 # os.rmdir(ruta_nueva)
